@@ -1,0 +1,109 @@
+@use "/src/styling/_variables.scss" as v;
+@use "/src/styling/positionMixin" as position;
+
+.top-page-header {
+  position: fixed;
+  top: 0;
+  @include position.flex-between-center;
+  height: 4rem;
+  background: v.$gray;
+  width: 100%;
+  font-size: 1rem;
+}
+.tools-container {
+  @include position.flex-around;
+  width: 65%;
+  height: 100%;
+}
+.logo-wrapper {
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  @include position.flex-allcenter;
+  .logo {
+    transition: 0.3s all ease-in-out;
+    font-size: 1.5rem;
+    :hover {
+      text-shadow: 0px 0px 5px v.$orange;
+      cursor: pointer;
+    }
+  }
+}
+.tab {
+  @include position.flex-allcenter;
+  transition: 0.3s all ease-in-out;
+  width: 25%;
+  height: 100%;
+  cursor: pointer;
+  > div {
+    transition: 0.3s all ease-in-out;
+  }
+  .icon {
+    @include position.flex-allcenter;
+    transition: 0.3s all ease-in-out;
+    > img {
+      width: 2rem;
+    }
+  }
+  &:hover .icon {
+    transform: translateY(-5px);
+  }
+}
+
+.title {
+  transition: 0.3s all ease-in-out;
+}
+
+// media for tablet
+@media screen and (min-width: 768px) {
+  .top-page-header {
+    height: 5rem;
+    .tools-container {
+      width: 70%;
+    }
+  }
+  .tab:hover {
+    background: v.$orange;
+    .title {
+      color: v.$gray;
+    }
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+// media for desktop
+@media screen and (min-width: 1024px) {
+  .tab:hover {
+    background: v.$dark-gray;
+    .title {
+      transform: translate(20px, -17px);
+      color: v.$orange;
+      animation: 0.5s move-title ease-in-out;
+    }
+    .icon {
+      transform: translate(-40px, 10px);
+      scale: 1.2;
+      animation: 0.5s move-icon ease-in-out;
+    }
+  }
+}
+
+@keyframes move-title {
+  50% {
+    transform: translate(20px, 0);
+  }
+  100% {
+    transform: translate(20px, -17px);
+  }
+}
+
+@keyframes move-icon {
+  50% {
+    transform: translate(-40px, 0);
+  }
+  100% {
+    transform: translate(-40px, 10px);
+  }
+}

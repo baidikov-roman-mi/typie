@@ -1,0 +1,15 @@
+@use "/src/styling/_variables.scss" as v;
+.greeting {
+  padding: 0 2rem;
+  .greeting-title {
+    font-size: 2rem;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+  }
+  .greeting-title:hover {
+    text-shadow: 0px 0px 5px v.$orange;
+  }
+  .greeting-description {
+    font-size: 1.2rem;
+  }
+}

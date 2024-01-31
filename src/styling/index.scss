@@ -1,0 +1,34 @@
+@use "/src/styling/_variables.scss" as v;
+@import "./fonts.scss";
+*{
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: v.$orange;
+  background-color: v.$gray;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+h1 {
+  margin: 0;
+  font-family: "Montserrat Medium", sans-serif;
+}
+img {
+  max-width: 100%;
+}

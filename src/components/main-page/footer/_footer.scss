@@ -1,0 +1,25 @@
+@use "/src/styling/_positionMixin.scss" as position;
+@use "/src/styling/variables" as v;
+
+footer {
+  width: 100%;
+  height: 5rem;
+  background: v.$gray;
+  position: absolute;
+  bottom: 0;
+  @include position.flex-allcenter;
+
+  .footer-icon-group {
+    @include position.flex-allcenter-column;
+    padding: 0 1rem;
+    gap: 10px;
+    .icon {
+      width: 1.5rem;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .footer-icon-group {
+    @include position.direction-row;
+  }
+}
