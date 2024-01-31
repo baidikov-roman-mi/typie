@@ -24,7 +24,7 @@ Welcome to Typie, the web application designed to elevate your typing skills and
 
 ## If you just want to see the result
 
-Here is [Netlify link]() where you can see the output.
+Here is [Netlify link](https://typie.netlify.app/) where you can see the output.
 
 ### Currently, two official plugins are available:
 
@@ -66,7 +66,7 @@ export default {
 ### Second step: Clone this repository using this commands :
 
 ```
-git clone https://github.com/Ca-tt/typie
+git clone https://github.com/baidikov-roman-mi/typie
 cd typie
 ```
 
@@ -75,7 +75,7 @@ cd typie
 Otherwise, just add "." in the end of `git clone`, and the project will be cloned iside of the folder you are in:
 
 ```
-git clone hthttps://github.com/Ca-tt/typie .
+git clone hthttps://github.com/baidikov-roman-mi/typie .
 ```
 
 ### Third step: Local setup
