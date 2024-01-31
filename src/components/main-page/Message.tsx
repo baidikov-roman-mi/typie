@@ -12,7 +12,7 @@ const Message = ({ resolution }: Props) => {
 
   function closeMessageWindow(btnValue: string) {
     // TO-DO: Create HTML select where user can choose another device if the answer is "No"
-
+    console.log("btnValue :>> ", btnValue)
     setShowMessage(false)
   }
 
