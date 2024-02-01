@@ -12,7 +12,7 @@ import "./styling/App.scss"
 
 function App() {
   // Set up current screen size
-  let screenSize = useScreen().width
+  const screenSize = useScreen().width
   console.log('screenSize :>> ', screenSize);
 
   return (
@@ -23,7 +23,8 @@ function App() {
       <Button value="Start Test!" hint={true} />
       <Footer />
       {/* TO-DO: Create a banner for autoplay */}
-      <Audio loop={true} autoplay={true}></Audio>
+      {/* I disable playing by default, if you don't mind */}
+      <Audio loop={true} autoplay={false}></Audio>
     </>
   )
 }

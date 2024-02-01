@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react"
 
+/* useScreen returns width as a number */
 interface ScreenSize {
   width: number
 }
 
+/** 
+  * Custom useScreen hook (made by Roma)
+  * 
+  * @returns {ScreenSize} The size of a screen in plain number
+*/
 const useScreen = (): ScreenSize => {
   const [screenWidth, setScreenWidth] = useState<ScreenSize>({
     width: window.innerWidth

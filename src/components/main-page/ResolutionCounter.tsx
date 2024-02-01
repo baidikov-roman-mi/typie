@@ -1,23 +1,25 @@
 interface Props {
   resolution: number
 }
-const ResolutionCounter = ({ resolution }: Props) => {
-  let ifTablet = resolution >= 768
-  let ifPhone = resolution < 768
-  let ifPC = resolution >= 1024
 
+const ResolutionCounter = ({ resolution }: Props) => {
+  /* find current device name based on resolution props */
+  const currentDeviceName = (): string => {
+    if (resolution < 768) {
+      return "a phone"
+    } else if (resolution < 1024) {
+      return "a tablet"
+    } else {
+      return "a pc"
+    }
+  }
+
+  /* remove cluttered logic from markup, move it to method */
   return (
     <>
       <h2 className="message-recommendations">
         Seems like you are currently using
-        {ifPhone
-          ? " a phone"
-          : ifTablet && resolution < 1024
-            ? " a tablet"
-            : ifPC
-              ? " a pc"
-              : "a NASSA PC"}
-        . Is it correct?
+        {currentDeviceName()}. Is it correct?
       </h2>
     </>
   )

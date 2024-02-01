@@ -23,9 +23,11 @@ const Message = ({ resolution }: Props) => {
         <div className="message-background">
           <div className="message-container">
             <div className="message">
+              {/* ResolutionCounter displays mobile / tablet / pc text */}
               <ResolutionCounter resolution={resolution} />
             </div>
             <div className="buttons">
+              {/* hint is an animation for a prefered button */}
               <Button value="Yes" hint={true} click={() => closeMessageWindow("Yes")} />
               <Button value="No" click={() => closeMessageWindow("No")} />
             </div>

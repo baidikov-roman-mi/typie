@@ -10,7 +10,7 @@ interface Props {
 const Button = ({ value, click, hint }: Props) => {
   return (
     <>
-      <button className={`button ${hint ? "set-to-recommended" : null}`} onClick={click}>
+      <button className={`button ${hint ? "set-to-recommended" : ''}`} onClick={click}>
         {value}
       </button>
     </>
