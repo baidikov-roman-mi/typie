@@ -19,7 +19,7 @@ const ResolutionCounter = ({ resolution }: Props) => {
     <>
       <h2 className="message-recommendations">
         Seems like you are currently using
-        {currentDeviceName()}. Is it correct?
+        {' ' + currentDeviceName()}. Is it correct?
       </h2>
     </>
   )

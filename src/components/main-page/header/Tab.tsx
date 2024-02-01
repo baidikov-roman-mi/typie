@@ -1,34 +1,34 @@
-import useScreen from "../../../hooks/useScreen.tsx"
+/* To-do: научиться писать альясы в vite.config, чтобы не было относительных и абсолютных путей */
+import useScreenWidth from "../../../hooks/useScreenWidth.tsx"
 
 interface Props {
   tabTitle: string
 }
 
+/* simplified logic, removed unneccesary variables, conditions and blocks */
 export default function Tab({ tabTitle }: Props) {
-  let screenSize = useScreen().width
-
-  let ifPhone = screenSize < 768
-  let ifPC = screenSize >= 1024
+  const screenSize = useScreenWidth();
+  const isPhone = screenSize < 768;
+  const isPC = screenSize >= 1024;
 
   return (
-    // TO-DO: more compact return
-    <>
-      <div className="tab">
-        <div className={ifPhone ? "icon" : ifPC ? "icon-and-title" : "title"}>
-          {ifPhone ? (
-            <img src={`./icons/${tabTitle}.svg`} alt={tabTitle} />
-          ) : ifPC ? (
-            <>
-              <div className="icon">
-                <img src={`./icons/${tabTitle}.svg`} alt={tabTitle} />
-              </div>
-              <div className={`${tabTitle} title`}>{tabTitle.toUpperCase()}</div>
-            </>
-          ) : (
-            tabTitle.toUpperCase()
-          )}
-        </div>
+    <div className="tab">
+      <div className={isPhone ? "icon" : "icon-and-title"}>
+        {isPhone && (
+          <img src={`./icons/${tabTitle}.svg`} alt={tabTitle} />
+        )}
+
+        {isPC && (
+          <>
+            <div className="icon">
+              <img src={`./icons/${tabTitle}.svg`} alt={tabTitle} />
+            </div>
+            <div className={`${tabTitle} title`}>{tabTitle.toUpperCase()}</div>
+          </>
+        )}
+
+        {!isPhone && !isPC && tabTitle.toUpperCase()}
       </div>
-    </>
-  )
+    </div>
+  );
 }

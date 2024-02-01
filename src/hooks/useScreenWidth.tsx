@@ -1,25 +1,19 @@
 import { useState, useEffect } from "react"
 
 /* useScreen returns width as a number */
-interface ScreenSize {
-  width: number
-}
 
-/** 
-  * Custom useScreen hook (made by Roma)
-  * 
-  * @returns {ScreenSize} The size of a screen in plain number
-*/
-const useScreen = (): ScreenSize => {
-  const [screenWidth, setScreenWidth] = useState<ScreenSize>({
-    width: window.innerWidth
-  })
+
+/**
+ * Custom useScreenWidth hook (made by Roma)
+ *
+ * @returns {number} The size of a screen in a plain number
+ */
+const useScreenWidth = (): number => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
   useEffect(() => {
     const handleResize = () => {
-      setScreenWidth({
-        width: window.innerWidth
-      })
+      setScreenWidth(window.innerWidth)
     }
 
     // Initial setup
@@ -34,4 +28,4 @@ const useScreen = (): ScreenSize => {
   return screenWidth
 }
 
-export default useScreen
+export default useScreenWidth

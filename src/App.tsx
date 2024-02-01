@@ -1,5 +1,5 @@
-import useScreen from "./hooks/useScreen.tsx"
-// UseScreen - custom hook
+/* UseScreen - custom hook for updating current screen width  */
+import useScreenWidth from "./hooks/useScreenWidth.tsx"
 
 import Header from "./components/main-page/header/Header"
 import Audio from "./components/main-page/AudioPlayer"
@@ -12,7 +12,7 @@ import "./styling/App.scss"
 
 function App() {
   // Set up current screen size
-  const screenSize = useScreen().width
+  const screenSize = useScreenWidth()
   console.log('screenSize :>> ', screenSize);
 
   return (
