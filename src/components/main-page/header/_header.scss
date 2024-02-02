@@ -15,21 +15,6 @@
   width: 65%;
   height: 100%;
 }
-.logo-wrapper {
-  width: 30%;
-  height: 100%;
-  margin: 0;
-  @include position.flex-allcenter;
-  .icon img {
-    width: 5rem;
-  }
-  .logo {
-    transition: 0.3s all ease-in-out;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
 
 .tab {
   @include position.flex-allcenter;
@@ -66,10 +51,6 @@
   }
   .tab:hover {
     background: v.$dark-gray;
-  }
-
-  .logo {
-    font-size: 2.5rem;
   }
 }
 // media for desktop

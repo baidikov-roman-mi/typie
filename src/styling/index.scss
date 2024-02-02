@@ -32,3 +32,10 @@ h1 {
 img {
   max-width: 100%;
 }
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: v.$orange;
+}

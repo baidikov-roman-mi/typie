@@ -1,27 +1,29 @@
 interface Props {
-  tabTitle: string
+  tabContent: string
   device: string
 }
-const Tab = ({ tabTitle, device }: Props) => {
+const Tab = ({ tabContent, device }: Props) => {
   let isPhone = device === "phone"
   let isPC = device === "pc"
 
   return (
     <div className="tab">
-      <div className={isPhone ? "icon" : !isPC ? "title" : "icon-and-title"}>
-        {isPhone && <img src={`./icons/${tabTitle}.svg`} alt={tabTitle} />}
+      <a href={`/${tabContent}`}>
+        <div className={isPhone ? "icon" : !isPC ? "title" : "icon-and-title"}>
+          {isPhone && <img src={`./icons/${tabContent}.svg`} alt={tabContent} />}
 
-        {isPC && (
-          <>
-            <div className="icon">
-              <img src={`./icons/${tabTitle}.svg`} alt={tabTitle} />
-            </div>
-            <div className={`${tabTitle} title`}>{tabTitle.toUpperCase()}</div>
-          </>
-        )}
+          {isPC && (
+            <>
+              <div className="icon">
+                <img src={`./icons/${tabContent}.svg`} alt={tabContent} />
+              </div>
+              <div className={`${tabContent} title`}>{tabContent.toUpperCase()}</div>
+            </>
+          )}
 
-        {!isPhone && !isPC && tabTitle.toUpperCase()}
-      </div>
+          {!isPhone && !isPC && tabContent.toUpperCase()}
+        </div>
+      </a>
     </div>
   )
 }

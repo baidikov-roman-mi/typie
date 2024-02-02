@@ -13,7 +13,14 @@
       "@styling/*":["./src/styling/*"],
       "@fonts/*":["./src/styling/fonts/static/*"],
       "@icon/*":["./public/icons/*"],
-      "@mainPageComponent/*":["./src/components/main-page/*"],
+      "@routes/*":["./src/routes/*"],
+      "@mainPage/*":["./src/components/main-page/*"],
+      "@aboutPage/*":["./src/components/about-page/*"],
+      "@testPage/*":["./src/components/test-page/*"],
+      "@lessonsPage/*":["./src/components/lessons-page/*"],
+      "@leadersPage/*":["./src/components/leaders-page/*"],
+      "@settingsPage/*":["./src/components/settings-page/*"],
+      "@loginPage/*":["./src/components/login-page/*"],
     },
     
     /* Bundler mode */

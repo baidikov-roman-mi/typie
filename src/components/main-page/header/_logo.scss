@@ -1,0 +1,17 @@
+@use "@styling/_positionMixin" as position;
+
+.logo-wrapper {
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  @include position.flex-allcenter;
+  .icon {
+    width: 5rem;
+  }
+  .logo {
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
