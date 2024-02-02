@@ -1,0 +1,22 @@
+// @use "/src/styling/_positionMixin.scss" as position;
+// @use "/src/styling/variables" as v;
+
+// .message-background {
+//   width: 100vw;
+//   height: 100vh;
+//   position: absolute;
+//   z-index: 10;
+//   background: rgb(0, 0, 0, 0.9);
+//   @include position.flex-allcenter;
+// }
+// .message-container {
+//   width: 80%;
+//   background: v.$gray;
+//   border: 5px solid v.$orange;
+//   padding: 1rem;
+//   @include position.flex-allcenter-column;
+// }
+// .buttons {
+//   width: 100%;
+//   @include position.flex-around-center;
+// }

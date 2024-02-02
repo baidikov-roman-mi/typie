@@ -1,6 +1,6 @@
-@use "/src/styling/_variables.scss" as v;
+@use "./variables" as v;
 @import "./fonts.scss";
-*{
+* {
   box-sizing: border-box;
 }
 

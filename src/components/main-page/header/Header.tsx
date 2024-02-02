@@ -1,19 +1,26 @@
 import "./_header.scss"
 import Tab from "./Tab.tsx"
+import Img from "../Img.tsx"
 
-export default function Header() {
+interface Props {
+  device: string
+}
+
+const Header = ({ device }: Props) => {
   return (
     <header className="top-page-header">
       <div className="logo-wrapper">
-        <h2 className="logo">Typie</h2>
+        <Img iconName="logo" type="svg" />
       </div>
       <div className="tools-container">
-        <Tab tabTitle="test" />
-        <Tab tabTitle="lessons" />
-        <Tab tabTitle="leaders" />
-        <Tab tabTitle="settings" />
-        <Tab tabTitle="login" />
+        <Tab device={device} tabTitle="test" />
+        <Tab device={device} tabTitle="lessons" />
+        <Tab device={device} tabTitle="leaders" />
+        <Tab device={device} tabTitle="settings" />
+        <Tab device={device} tabTitle="login" />
       </div>
     </header>
   )
 }
+
+export default Header

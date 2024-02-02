@@ -5,7 +5,7 @@ interface Props {
   children: string
 }
 
-const Greeting = ({ iconName, iconType, children }: Props) => {
+const FooterIconGroup = ({ iconName, iconType, children }: Props) => {
   return (
     <>
       <div className="footer-icon-group">
@@ -16,4 +16,4 @@ const Greeting = ({ iconName, iconType, children }: Props) => {
   )
 }
 
-export default Greeting
+export default FooterIconGroup

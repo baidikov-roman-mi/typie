@@ -1,8 +1,8 @@
-@use "/src/styling/variables" as color;
+@use "@styling/_variables" as v;
 
 .button {
-  background: color.$dark-gray;
-  color: color.$orange;
+  background: v.$dark-gray;
+  color: v.$orange;
   border: none;
   font-size: 2rem;
   width: 45%;
@@ -13,11 +13,19 @@
 }
 
 .button:hover {
-  color: color.$gray;
-  background: color.$orange;
-  box-shadow: 0px 0px 10px 1px color.$orange;
+  color: v.$gray;
+  background: v.$orange;
+  box-shadow: 0px 0px 10px 1px v.$orange;
 }
 
 .set-to-recommended {
   animation: recommendation-alert 1.5s ease-in-out infinite;
+}
+
+@keyframes recommendation-alert {
+  50% {
+    color: v.$dark-gray;
+    background: v.$orange;
+    box-shadow: 0px 0px 10px 1px v.$orange;
+  }
 }
