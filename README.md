@@ -80,14 +80,14 @@ git clone hthttps://github.com/baidikov-roman-mi/typie .
 
 ### Third step: Local setup
 
-You have to install dependencies, add sass and finally start the development server by running. You can do so with the following command:
+You have to install dependencies, add sass, react-router-dom and finally start the development server. You can do so with the following command:
 
 ```
-pnpm install && pnpm add -D sass && pnpm run dev
+pnpm install && pnpm add -D sass && pnpm install -D react-router-dom && pnpm install -D react-router && pnpm run dev
 ```
 
 You'll get a message inside the bash terminal:
 
-> > **Server running at http://localhost:5173/**
+> **Server running at http://localhost:5173/**
 
 This means that you have successfully set up the project and you are free for local coding.
