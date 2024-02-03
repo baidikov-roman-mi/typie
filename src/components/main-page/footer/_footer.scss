@@ -10,6 +10,7 @@ footer {
   @include position.flex-allcenter;
 
   .footer-icon-group {
+    height: 100%;
     @include position.flex-allcenter-column;
     padding: 0 1rem;
     gap: 10px;

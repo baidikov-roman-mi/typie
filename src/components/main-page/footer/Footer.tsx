@@ -3,24 +3,15 @@ import FooterIconGroup from "./FooterIconGroup.tsx"
 interface Props {}
 
 const Footer = ({}: Props) => {
+  const iconNames = ["github", "feedback", "support", "FAQ"]
   return (
-    // TO-DO: refactor IconGroup components into something more compact
-    <>
-      <footer className="footer">
-        <FooterIconGroup iconName="github" iconType="svg">
-          Github
+    <footer className="footer">
+      {iconNames.map((iconName) => (
+        <FooterIconGroup key={iconName} iconName={iconName} iconType="svg">
+          {iconName.charAt(0).toUpperCase() + iconName.slice(1)}
         </FooterIconGroup>
-        <FooterIconGroup iconName="feedback" iconType="svg">
-          Feedback
-        </FooterIconGroup>
-        <FooterIconGroup iconName="support" iconType="svg">
-          Support
-        </FooterIconGroup>
-        <FooterIconGroup iconName="info" iconType="svg">
-          Info
-        </FooterIconGroup>
-      </footer>
-    </>
+      ))}
+    </footer>
   )
 }
 
