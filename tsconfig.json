@@ -15,12 +15,7 @@
       "@icon/*":["./public/icons/*"],
       "@routes/*":["./src/routes/*"],
       "@mainPage/*":["./src/components/main-page/*"],
-      "@aboutPage/*":["./src/components/about-page/*"],
-      "@testPage/*":["./src/components/test-page/*"],
-      "@lessonsPage/*":["./src/components/lessons-page/*"],
-      "@leadersPage/*":["./src/components/leaders-page/*"],
-      "@settingsPage/*":["./src/components/settings-page/*"],
-      "@loginPage/*":["./src/components/login-page/*"],
+      "@views/*":["./src/components/views/*"]
     },
     
     /* Bundler mode */
