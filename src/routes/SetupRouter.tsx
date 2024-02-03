@@ -1,14 +1,16 @@
+// importing react otimizing tools
+import { lazy } from "react"
 // import useRoutes to create routes
 import { useRoutes } from "react-router-dom"
 
 // import components
-import Home from "@mainPage/Home"
-import About from "@aboutPage/About"
-import Test from "@testPage/Test"
-import Lessons from "@lessonsPage/Lessons"
-import Leaders from "@leadersPage/Leaders"
-import Settings from "@settingsPage/Settings"
-import Login from "@loginPage/Login"
+const Home = lazy(() => import("@mainPage/Home"))
+const About = lazy(() => import("@aboutPage/About"))
+const Test = lazy(() => import("@testPage/Test"))
+const Lessons = lazy(() => import("@lessonsPage/Lessons"))
+const Leaders = lazy(() => import("@leadersPage/Leaders"))
+const Settings = lazy(() => import("@settingsPage/Settings"))
+const Login = lazy(() => import("@loginPage/Login"))
 
 // setup our routes
 const SetupRouter = () => {
