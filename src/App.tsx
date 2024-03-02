@@ -23,9 +23,9 @@ const App = () => {
 
   return (
     <>
+      <Header device={device} />
       <Router>
-        <Header device={device} />
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<h1>Loading . . .</h1>}>
           <SetupRouter />
         </Suspense>
       </Router>

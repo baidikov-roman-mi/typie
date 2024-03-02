@@ -1,30 +1,28 @@
-// importing custom hook for lazy load (faster than common imports)
-import useLazyLoad from "@hooks/useLazyLoad"
-
+// import useRoutes to create routes
+import { lazy } from "react"
 import { useRoutes } from "react-router-dom"
 
-// Import an object of routes
-import routesObject from "./routes"
+// import components
+const Home = lazy(() => import("@mainPage/Home"))
+const About = lazy(() => import("@views/About"))
+const Test = lazy(() => import("@views/Test"))
+const Lessons = lazy(() => import("@views/Lessons"))
+const Leaders = lazy(() => import("@views/Leaders"))
+const Settings = lazy(() => import("@views/Settings"))
+const Login = lazy(() => import("@views/Login"))
 
-// creating routes object
-const routes = Object.fromEntries(
-  Object.entries(routesObject).map(([name, path]) => [
-    name,
-    useLazyLoad({ path, namedExport: null })
-  ])
-)
-
+// setup our routes
 const SetupRouter = () => {
-  let createRoutes = useRoutes([
-    { path: "/", element: <routes.Home /> },
-    { path: "about", element: <routes.About /> },
-    { path: "test", element: <routes.Test /> },
-    { path: "lessons", element: <routes.Lessons /> },
-    { path: "leaders", element: <routes.Leaders /> },
-    { path: "settings", element: <routes.Settings /> },
-    { path: "login", element: <routes.Login /> }
+  const routes = useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "about", element: <About /> },
+    { path: "test", element: <Test /> },
+    { path: "lessons", element: <Lessons /> },
+    { path: "leaders", element: <Leaders /> },
+    { path: "settings", element: <Settings /> },
+    { path: "login", element: <Login /> }
   ])
-  return createRoutes
+  return routes
 }
 
 export default SetupRouter
