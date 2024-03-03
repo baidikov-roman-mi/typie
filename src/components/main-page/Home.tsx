@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Greeting userName="User" />
-      <Button value="Start Test!" hint={true} />
+      <Button value="Start Test!" hint={true} href="/test" />
       <Footer />
       {/* TO-DO: Create a banner for autoplay */}
       <Audio loop={true} autoplay={false}></Audio>

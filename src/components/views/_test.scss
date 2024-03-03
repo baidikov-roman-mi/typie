@@ -1,0 +1,14 @@
+@use "@styling/_variables" as v;
+
+.textarea {
+  border: 0;
+  width: 80vw;
+  resize: none;
+  background: none;
+  color: v.$orange;
+  font-size: 32px;
+}
+
+.textarea:focus {
+  outline: none;
+}

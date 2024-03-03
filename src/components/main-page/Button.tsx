@@ -5,14 +5,17 @@ interface Props {
   value?: string
   click?: React.MouseEventHandler<HTMLButtonElement>
   hint?: boolean
+  href?: string
 }
 
-const Button = ({ value, click, hint }: Props) => {
+const Button = ({ value, click, hint, href }: Props) => {
   return (
     <>
-      <button className={`button ${hint ? "set-to-recommended" : ''}`} onClick={click}>
-        {value}
-      </button>
+      <a href={href ? href : "#"}>
+        <button className={`button ${hint ? "set-to-recommended" : ""}`} onClick={click}>
+          {value}
+        </button>
+      </a>
     </>
   )
 }
