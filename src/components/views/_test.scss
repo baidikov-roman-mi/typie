@@ -1,10 +1,6 @@
 @use "@styling/_variables" as v;
 @import "@styling/fonts.scss";
 
-.textarea-container {
-  position: relative;
-}
-
 .textarea {
   font-family: "Montserrat", sans-serif;
   border: 0;
@@ -13,23 +9,32 @@
   background: none;
   color: v.$orange;
   font-size: 32px;
+  margin: 50px 0 0 0;
+  overflow: hidden;
 }
 
 .textarea:focus {
   outline: none;
 }
 
-.placeholder {
-  font-family: "Montserrat", sans-serif;
+.expected-text-container {
+  width: 100%;
+  background: v.$gray;
+  color: v.$orange;
   position: absolute;
-  width: 80vw;
-  font-size: 32px;
-  pointer-events: none;
-  left: 50.2%; // todo: fix it
-  top: 48%; // cause its trash
+  top: 25%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.4;
-  transition: opacity 0.3s;
-  max-height: 100%;
-  text-align: left;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+.error {
+  color: red;
+}
+
+.speed-check {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 35%;
+  left: 10%;
 }
