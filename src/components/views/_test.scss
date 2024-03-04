@@ -1,6 +1,12 @@
 @use "@styling/_variables" as v;
+@import "@styling/fonts.scss";
+
+.textarea-container {
+  position: relative;
+}
 
 .textarea {
+  font-family: "Montserrat", sans-serif;
   border: 0;
   width: 80vw;
   resize: none;
@@ -11,4 +17,19 @@
 
 .textarea:focus {
   outline: none;
+}
+
+.placeholder {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  width: 80vw;
+  font-size: 32px;
+  pointer-events: none;
+  left: 50.2%; // todo: fix it
+  top: 48%; // cause its trash
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  max-height: 100%;
+  text-align: left;
 }
