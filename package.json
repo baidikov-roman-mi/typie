@@ -5,6 +5,7 @@
   "version": "1.0.1",
   "type": "module",
   "scripts": {
+    "serve": "node ./server/nodeServer.js",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
